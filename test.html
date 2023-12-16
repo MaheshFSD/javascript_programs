@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        #container {
+            width: 350px;
+            height: 200px;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function drag(ev) {
+            ev.dataTransfer.setData('text', ev.target.id)
+        }
+        function drop(ev){
+            let data = ev.dataTransfer.getData('text');
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+        }
+        function dragend(ev) {
+            ev.preventDefault();
+        }
+    </script>
+    <center><input type="text" placeholder="Enter something"/></center>
+    <h1 style="color: red; background-color: rgb(96, 99, 99);">Come to css</h1>
+    <!-- Hello All-->
+    <a popover id="myTarget" href="http://www.google.com" target="_blank" ping="http://google.com">Hello click here</a>
+    <button popovertarget="myTarget" >Click to see popovertarget</button>
+    <p contenteditable="true">This is an editable paragraph. And you can make it as editable paragraph if you add this ATTRIBUTE contenteditable</p>
+    <h3 hidden style="color: salmon; background: slategray; border: 1px dotted maroon; border-radius: 3px;">Hello CSS Properties</h3>
+    <div id="container" ondrop="drop(event)" ondragover="dragend(event)"></div>
+    <p id="item" draggable="true" ondragstart="drag(event)">You can drag this text to the above box or container.</p>
+</body>
+</html>
