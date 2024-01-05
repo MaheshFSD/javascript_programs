@@ -132,6 +132,7 @@ let greet = ['h', 'e', 'l', 'l', 'o'];
 console.log(greet[2])
 let nums = [10,20,13,1,2,3,4,5,6];
 let nums2 = [30,31,32,33,34,35,36];
+let nums3 = [10,5,4,1,3,2];
 console.log(nums.push(7), nums);
 console.log(nums.pop(), nums);
 console.log(nums.shift(), nums);
@@ -139,5 +140,52 @@ console.log(nums.unshift(10), nums);
 console.log(nums.includes(20));
 console.log(nums.slice(1,3));
 console.log(nums, nums.splice(1,3), nums.push(20),nums);
-console.log(nums.sort(), nums)
+console.log(nums.sort(), nums)  // Sort sorts by alphabetically.. it works on strings only.
 console.log(nums.concat(nums2));
+console.log(nums.reverse()); // reverse() changes the original array. to Reversed() doesn't. it's safest way to reverse the elelments
+console.log(nums3.sort((a,b)=>a-b));  // to make it work on numbers use a compare function 
+console.log(nums3.sort((a,b)=>b-a));  // For descending order ----- Sort changes the original Array but not toSorted()- it's safest way to sort elements without changing original Array.
+let one = 1;
+let obj = {
+    name: 'Full Name',
+    age: 25,
+    position: 'Developer',
+    newObj: {
+        newAge: 30,
+    },
+    10: 'ten', 
+};
+console.log(obj['age'], obj.age, obj.newObj.newAge, obj['newObj']['newAge']);
+console.log(Object.keys(obj).length);
+console.log(obj[10], 'bracket notation value');
+for(let x of nums3) console.log(x, ' =======Single element iteration using FOR OF');
+for(let key in obj) console.log(obj[key], ' ==========Object iteration through FOR IN');
+obj.gender = 'Male'; // Adding a key value to object
+delete obj[10]; // Deleting a key value in object
+console.log(obj, ' ========= obj ==');
+
+hello() // We can call this before declaring it also.
+// Function declaration
+function hello() { // anonymous function
+    console.log("Hello...");
+}
+
+// greetings(); Cannot access before initialization
+// Function Expression
+let greetings = function() {
+    console.log("Greetings...");
+}
+var x1;
+console.log(x1)
+x1 = 20
+console.log(x1)
+var x1 = 30;
+console.log(x1)
+
+console.log(Boolean(''))
+console.log(Boolean(0))
+console.log(Boolean(undefined))
+console.log(Boolean(null))
+console.log(Boolean(NaN))
+console.log(Boolean({}))
+console.log(Boolean(1))
