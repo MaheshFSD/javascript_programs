@@ -189,3 +189,12 @@ console.log(Boolean(null))
 console.log(Boolean(NaN))
 console.log(Boolean({}))
 console.log(Boolean(1))
+
+let sayHi = () => {
+    return "Hello from arrow";
+}
+let sayHi1 = () => "Hello from Arrow1"
+const sayHiName = name => `Hello ${name}`;
+console.log(sayHi());
+console.log(sayHi1());
+console.log(sayHiName('John'));
