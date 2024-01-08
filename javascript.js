@@ -206,5 +206,23 @@ console.log(Array.isArray(arr3), Array.isArray(obj)) // to know a variable is an
 // the other way is using instanceof() 
 console.log(arr3 instanceof Array, obj instanceof Array) 
 // using toString() on an array 
-let fruits = ['apple', 'mango', 'banana', 'papaya']
+let fruits = ['apple', 'mango', 'banana', 'banana', 'papaya']
 console.log(fruits.toString()); // toString() converts array to comma separated string.
+console.log(fruits.at(3)); // returns the element present at the index provided..
+delete fruits[0];
+console.log(fruits); // delete on arrays produce undefined holes in the indexes result - [ <1 empty item>, 'mango', 'banana', 'papaya' ]
+console.log(fruits.copyWithin(3,0)); // copyWithin works only on available elemets only and you can copy any element to a destination index
+console.log(fruits.copyWithin(3,0,3)) // it will not change the array length. it copies from elements of from index(0) to till the to index(3)
+let arr4 = [ 1,['x','y','z',['a','b',['c','d']]],5,[6,7]];
+let obj2 = {
+    first: 'G',
+    last: 'mahesh',
+    age: 26,
+}
+console.log(arr4.flat().flat().flat()); // flat will be used to change the 2 dimentional array to single dimentional array
+console.log(fruits.indexOf('banana')+1)
+console.log(fruits.lastIndexOf('banana'));
+console.log(fruits.includes('papaya'));
+// console.log(fruits.find('banana'));
+const nums4 = [31,22,45,22,1,3,6,7,3,13,432,55];
+console.log(nums4.find(x => x >400)) // here find founds the first occurance of the element that matches the condition.
