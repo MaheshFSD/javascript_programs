@@ -198,3 +198,13 @@ const sayHiName = name => `Hello ${name}`;
 console.log(sayHi());
 console.log(sayHi1());
 console.log(sayHiName('John'));
+const arr2 = new Array(40); // creates array of 40 undefined elements
+const arr3 = [40]; // creates array with element 40
+console.log(arr2, arr3); // result : [ <40 empty items> ] [ 40 ]
+// 1 way to find the variable is an array or not using Array.isArray()
+console.log(Array.isArray(arr3), Array.isArray(obj)) // to know a variable is an array use isArray() or instanceof
+// the other way is using instanceof() 
+console.log(arr3 instanceof Array, obj instanceof Array) 
+// using toString() on an array 
+let fruits = ['apple', 'mango', 'banana', 'papaya']
+console.log(fruits.toString()); // toString() converts array to comma separated string.
