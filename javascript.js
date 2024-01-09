@@ -226,3 +226,73 @@ console.log(fruits.includes('papaya'));
 // console.log(fruits.find('banana'));
 const nums4 = [31,22,45,22,1,3,6,7,3,13,432,55];
 console.log(nums4.find(x => x >400)) // here find founds the first occurance of the element that matches the condition.
+// fill Array eith default values 
+let arr5 = []
+arr5.fill(0);
+console.log(arr5)
+arr5 = [true,false, undefined, null, 1, 'Hello', 10.1];
+arr5.fill(0);
+console.log(arr5);
+arr5.fill(true);
+console.log(arr5);
+arr5.fill(false);
+console.log(arr5)
+let arr6 = new Array(10);
+arr6.fill(10);
+console.log(arr6);
+let arr7 = new Array(5).fill('$')
+console.log(arr7);
+console.log(nums4.findIndex(x => x > 31));
+console.log(nums4.findLastIndex(x => x > 31));
+console.log(nums4.findLast(x=>x>55))
+console.log(obj.age);
+let obj3 = {
+    f: 'first',
+    l: 'last',
+    a: 28,
+    details: function (age) {
+        console.log(this.a, this.f,this.l, age);
+    }
+}
+obj3.details(25);
+if(typeof document !== 'undefined')
+console.log(document);
+ let element1 = document.getElementById('item')
+ console.log(element1);
+ let ele2 = document.getElementsByClassName('newTooltip')
+ console.log(ele2);
+ let ele3 = document.getElementsByTagName('h1');
+ console.log(ele3);
+ let ele4 = document.querySelector('#container')
+ console.log(ele4, '=========');
+ let ele5 = document.querySelector('.tooltip')
+ let ele7 = document.querySelector('.newTooltip')
+ console.log(ele5, '=========');
+ let ele6 = document.querySelectorAll('.newTooltip')
+ console.log(ele6, '======6==');
+ console.log(ele7.parentNode, ' 0000000');
+ console.log(ele5.childNodes, ' 1111111');
+ console.log(ele7.nextElementSibling, ' 3333333');
+ const ele8 = document.querySelector('.tooltipText');
+ console.log(ele8.previousElementSibling, ' 222222')
+const ele9 = document.querySelector('.changeText');
+// ele9.innerHTML = 'CSS welcome';
+const ele10 = document.querySelector('.domClass');
+ele10.innerHTML = 'I changed Text Here. It is in color Blue.'
+ele10.style.color = 'red';
+ele10.style.backgroundColor = 'white'
+ele10.style.border = '5x solid white';
+ele10.style.fontStyle = 'sansSerif';
+// let ele11 = document.getElementsByTagName('body');
+// console.log(ele11, ' kkkkkkkkkkkk');
+document.body.style.backgroundColor = 'white';
+let div1 = document.createElement('div');
+div1.classList.add('newDivClass');
+div1.innerHTML = 'The last Div Experiment';
+document.body.appendChild(div1);
+div1.classList.remove('newDivClass');
+let div2 = document.createElement('div');
+div2.setAttribute('id', 'ginal-div');
+div2.innerHTML = 'Hello Last';
+let bdy = document.querySelector('body');
+bdy.appendChild(div2);
