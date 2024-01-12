@@ -296,3 +296,20 @@ div2.setAttribute('id', 'ginal-div');
 div2.innerHTML = 'Hello Last';
 let bdy = document.querySelector('body');
 bdy.appendChild(div2);
+div2.setAttribute('id', 'lastDiv');
+div2.setAttribute('class', 'lastDivClass');
+div2.id = 'lastDiv';
+div2.class = 'lastDivClass';
+let p = document.createElement('p');
+p.innerHTML = "I am Newly created";
+// p.insertBefore
+div2.insertAdjacentElement('beforebegin', p);
+
+function clickToListen() {
+    console.log('I am clicked after listening.....')
+}
+let btnL = document.getElementById('listenBtn');
+btnL.addEventListener('click', function(){
+    console.log("finally listened");
+})
+btnL.addEventListener('click', clickToListen);
